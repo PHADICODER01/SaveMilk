@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coffee Break Alert ☕</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="card">
+
+    <h1>☕ Coffee Break Alert</h1>
+    <h2>👀 Coffee Camera Active</h2>
+
+    <img src="modi-modi-camera.gif" class="main-img">
+
+    <div class="section">
+        <p id="jokeText"></p>
+
+        <img src="cow.jpeg" class="small-img">
+    </div>
+
+    <button onclick="newJoke()">🔄 New Coffee Rule</button>
+
+</div>
+
+<script>
+
+const jokes = [
+"Milk overload detected. Switch to black coffee.",
+"Third coffee today — HR notified.",
+"Extra sugar = extra meetings assigned.",
+"Boss radar active — sip silently.",
+"Coffee without biscuit is illegal.",
+"System warning: Mug refill too frequent.",
+"Developer mode activated — caffeine high.",
+"Productivity depends on next sip.",
+"Milk ratio violation recorded.",
+"Coffee department watching you 👀"
+];
+
+function newJoke() {
+    const j = jokes[Math.floor(Math.random()*jokes.length)];
+    document.getElementById("jokeText").innerHTML = j;
+}
+
+newJoke();
+
+</script>
+
+</body>
+</html>
